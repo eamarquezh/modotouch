@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modotouch</title>
+    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="stylesheet" href="css/anima.css">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+    
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+    
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+    
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+    
+            });
+        });
+        }
+
+        
+    
+        });
+       
+        var refs = {
+  modalEdicion: {
+    open: function() { document.getElementById('modalEdicion').classList.add('is-active');
+    },
+    close:function() { document.getElementById('modalEdicion').classList.remove('is-active');
+                      
+    }
+  }
+};
+    
+
+    </script>
+
+<div class="modal" id="modalEdicion">
+  <div onclick="refs.modalEdicion.close()" class="modal-background"></div>
+  <div class="modal-content">
+
+<form action="envia.php" method="post" class="form-consulta"> 
+
+      
+  <div class="field">
+     <div class="control">
+      <input name = "email" class="input is-medium" type="email" placeholder="Ingresa tu correo">
+     </div>
+   </div>
+
+  <div class="field">
+    <div class="control">
+      <textarea name="comentario" class="textarea is-medium" placeholder="!Cuentame todo¡" rows="2"></textarea>
+    </div>
+  </div>
+
+  <input class="button is-warning is-medium" type="submit" value="Enviar" class="btn-form">
+</form>
+
+  </div>
+  <button class="modal-close is-large" aria-label="close" onclick="refs.modalEdicion.close()"></button>
+</div>
+
+
+        <section class="hero is-primary is-fullheight">
+            <!-- Hero head: will stick at the top -->
+            <div class="hero-head">
+              <header class="navbar">
+                <div class="container">
+                  <div class="navbar-brand">
+                    <a class="navbar-item">
+                      <img src="img/logo-modotouch.png" alt="Logo">
+                    </a>
+                    <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </span>
+                  </div>
+                  <div id="navbarMenuHeroC" class="navbar-menu">
+                    <div class="navbar-end">
+                      <a class="navbar-item" href="mailto:ericmarquez@modotouch.com">
+                        Envianos un correo
+                      </a>
+                      <a target="_blank" href="https://api.whatsapp.com/send?phone=7711208704&text=Me%20gustaría%20saber%20mas" class="navbar-item">
+                        Envianos un whatsap
+                      </a>
+                      <a onclick="refs.modalEdicion.open()" class="navbar-item">
+                        Contactanos
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </header>
+            </div>
+          
+            <!-- Hero content: will be in the middle -->
+            <div class="hero-body">
+              <div class="container has-text-centered">
+                <h1 class="title">
+                    modotouch.com
+                  </h1>
+                  <div class="slider">
+                    <ul>
+                        <li>
+                            <h3 class="title is-5">
+                                Soluciones digitales para tu negocio.
+                            </h3>
+                        </li>
+                        <li>
+                            <h3 class="title is-5">
+                                Transforma tu negocio.
+                            </h3>
+                        </li>
+                        <li>
+                            <h3 class="title is-5">
+                                Capta a más clientes.
+                            </h3>
+                        </li>
+                        <li>
+                            <h3 class="title is-5">
+                                Mantén presencia en la red.
+                            </h3>
+                        </li>
+                    </ul>
+                    </div>
+                    <br>
+                  <h2 class="subtitle">
+                    Cambiate al modo touch.
+                  </h2>
+                  <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
+                    <div class="column">
+                      <div class="box">
+                        <article class="media">
+                          <div class="media-left">
+                            <figure class="image is-64x64">
+                              <img src="img/Diseno-web-modotouch.png" alt="Image">
+                            </figure>
+                          </div>
+                          <div class="media-content">
+                            <div class="content">
+                              <p>
+                                <strong>Diseño de Paginas Web</strong>
+                                <br>
+                                <ul>
+                                    <li>Aparece en los buscadores.</li>
+                                    <li>Igual de bien en PC, Tablet o móvil.</li>
+                                    <li>Diseño agradable.</li>
+                                </ul>
+                                <br>
+                                <strong>Desde $1500 al año</strong>
+                                <p></p>
+
+                                <button onclick="refs.modalEdicion.open()" class="button is-warning"><strong>Contactanos</strong></button>
+  
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                    <div class="column">
+                        <div class="box">
+                            <article class="media">
+                              <div class="media-left">
+                                <figure class="image is-64x64">
+                                  <img src="img/Diseno-web-modotouch.png" alt="Image">
+                                </figure>
+                              </div>
+                              <div class="media-content">
+                                <div class="content">
+                                  <p>
+                                    <strong>Publicidad digital</strong>
+                                    <br>
+                                    <ul>
+                                        <li>Que tu publicidad llegue al público que quieres.</li>
+                                        <li>Aparece en Facebook, Instagram, Google, u otra red social.</li>
+                                        
+                                    </ul>
+                                    <br>
+                                    <strong>Cotizamos tu campaña</strong>
+                                    <p></p>
+                                    <button class="button is-warning"><strong>Contactanos</strong></button>
+      
+                                </div>
+                              </div>
+                            </article>
+                          </div>
+                    </div>
+                  </div>
+
+
+
+
+</body>
+</html>
