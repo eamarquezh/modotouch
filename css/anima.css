@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
 .slider {
 	width: 95%;
 	margin: auto;
@@ -38,4 +44,3 @@
 html {
 	scroll-behavior: smooth;
 }
-
