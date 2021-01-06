@@ -3,9 +3,6 @@ $remitente = $_POST['email'];
 $destinatario = 'ericmarquez@modotouch.com'; // en esta línea va el mail del destinatario.
 $asunto = 'Contacto'; // acá se puede modificar el asunto del mail
 if (!$_POST){
-?>
-
-<?php
 }else{
 	 
     $cuerpo = "Mensaje: " . $_POST["comentario"] . "\r\n"; 
@@ -19,6 +16,7 @@ if (!$_POST){
 
     mail($destinatario, $asunto, $cuerpo, $headers);
     
-    include 'gracias.html'; //se debe crear un html que confirma el envío
+    include 'gracias.html'; //se debe crear un html que confirma el envío  
 }
+
 ?>

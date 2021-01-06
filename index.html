@@ -1,239 +1,186 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>modotouch</title>
-    <link rel="stylesheet" href="css/bulma.css">
-    <link rel="stylesheet" href="css/anima.css">
-</head>
-<body>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    
-        // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    
-        // Check if there are any navbar burgers
-        if ($navbarBurgers.length > 0) {
-    
-        // Add a click event on each of them
-        $navbarBurgers.forEach( el => {
-            el.addEventListener('click', () => {
-    
-            // Get the target from the "data-target" attribute
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
-    
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-            el.classList.toggle('is-active');
-            $target.classList.toggle('is-active');
-    
-            });
+      document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.fixed-action-btn');
+      var instances = M.FloatingActionButton.init(elems, {
+        direction: 'up',
+        hoverEnabled: false
         });
-        }
+      });
 
-        
-    
-        });
-       
-        var refs = {
-  modalEdicion: {
-    open: function() { document.getElementById('modalEdicion').classList.add('is-active');
-    },
-    close:function() { document.getElementById('modalEdicion').classList.remove('is-active');
-                      
-    }
-  }
-};
-    
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, open);
+  });
+</script>
+<!--area de navvar-->
+      <nav class="#red">
+          <a onclick="M.toast({html: '¿Sabías que  a diferencia de un logotipo el isotipo no contempla texto? y se utiliza para que relaciones la imagen con la marca.'})" class="brand-logo">
+            <img src="img/logo-modotouch.png" alt="modotouch" height="auto" width="50">
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a data-target="modal1" class="modal-trigger">Contactanos</a></li>
+            <li><a href="mailto:ericmarquez@modotouch.com">Envíanos un e-mail</a></li>
+          </ul>
+      </nav>
 
-    </script>
 
-<div class="modal" id="modalEdicion">
-  <div onclick="refs.modalEdicion.close()" class="modal-background"></div>
-  <div class="modal-content">
+<!--area titulo-->
+      <div class="center-alingn">
+        <center><h3>modotouch</h3></center>
+      </div>
 
-<form action="envia.php" method="post" class="form-consulta"> 
+      <div class="slider">
+        <ul>
+            <li>
+              <center class="flow-text">Soluciones digitales para tu negocio.</center>
+            </li>
+            <li>
+              <center class="flow-text">Transforma tu negocio.</center>
+            </li>
+            <li>
+              <center class="flow-text">Capta a más clientes.</center>
+            </li>
+            <li>
+              <center class="flow-text">Mantén presencia en la red.</center>
+            </li>
+        </ul>
+        </div>
 
-      
-  <div class="field">
-     <div class="control">
-      <input name = "email" class="input is-medium" type="email" placeholder="Ingresa tu correo">
-     </div>
-   </div>
+        <center>
+        <div class="row">
+          <!--block Digitaliza tu negocio-->
+          <div class="col s12 m4 4"><p>
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                  <center><i class="large material-icons">touch_app</i></center>
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4 ">Digitaliza tu negocio<i class="material-icons right">more_vert</i></span>
+                <p><a>
+                  <button data-target="modal1" class="btn waves-effect waves-light modal-trigger" type="submit" name="action">Contactanos
+                      <i class="material-icons right">mail</i>
+                  </button>          
+                </a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Digitaliza tu negocio<i class="material-icons right">close</i></span>
+                <p>Cuéntanos más de tu negocio y te decimos como se puede digitalizar</p>
+                <button data-target="modal1" class="btn waves-effect waves-light modal-trigger pulse" type="submit" name="action">Contactanos
+                  <i class="material-icons right">mail</i>
+              </button>
+              </div>
+            </div>
+          </p>
+          </div>
+          <!--block Diseño de paginas web-->
+          <div class="col s12 m4 4"><p>
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                  <center><i class="large material-icons">devices</i></center>
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Diseño de paginas web<i class="material-icons right">more_vert</i></span>
+                <p><a>
+                  <button data-target="modal1" class="btn waves-effect waves-light modal-trigger" type="submit" name="action">Contactanos
+                    <i class="material-icons right">mail</i>
+                </button>           
+                </a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Diseño de paginas web<i class="material-icons right">close</i></span>
+                <p>Aparece en los buscadores, igual de bien en pc tablet o movil, diseño agradable.</p>
+                <button data-target="modal1" class="btn waves-effect waves-light modal-trigger pulse" type="submit" name="action">Contactanos
+                  <i class="material-icons right">mail</i>
+              </button>  
+              </div>
+            </div>
+          </p>
+          </div>
+          <!--block Publicidad digital-->
+          <div class="col s12 m4 4"><p>
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                  <center><i class="large material-icons">thumb_up</i></center>
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Publicidad digital<i class="material-icons right">more_vert</i></span>
+                <p><a href="#">
+                  <button data-target="modal1" class="btn waves-effect waves-light modal-trigger" type="submit" name="action">Contactanos
+                    <i class="material-icons right">mail</i>
+                </button>          
+                </a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Publicidad digital<i class="material-icons right">close</i></span>
+                <p>Que tu publicidad llegue al público que quieres, aparece en google, facebook, instagram o la red social de tu elección.</p>
+                <button data-target="modal1" class="btn waves-effect waves-light modal-trigger pulse" type="submit" name="action">Contactanos
+                  <i class="material-icons right">mail</i>
+              </button> 
+              </div>
+            </div>
+          </p></div>
+        </div>
+      </center>
 
-  <div class="field">
-    <div class="control">
-      <textarea name="comentario" class="textarea is-medium" placeholder="!Cuentame todo¡" rows="2"></textarea>
-    </div>
-  </div>
 
-  <input class="button is-warning is-medium" type="submit" value="Enviar" class="btn-form">
-</form>
+  
 
-  </div>
-  <button class="modal-close is-large" aria-label="close" onclick="refs.modalEdicion.close()"></button>
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large #1de9b6 pulse tooltipped" data-position="bottom" data-tooltip="Contactanos" onclick="M.toast({html: 'Aquí encontraras nuestras apps del sitio y alternativas de contacto.'})">
+    <i class="large material-icons">apps</i>
+  </a>
+  <ul>
+    <li><div class="center-align">sms<div></div><a href="sms:+7711208704" class="btn-floating blue"><i class="material-icons">sms</i></a></li>
+    <li><div class="center-align">whatsapp<div></div><a href="https://api.whatsapp.com/send?phone=527711208704" class="btn-floating #00838f"><i class="material-icons">phone</i></a></li>
+    <li><div class="center-align">e-mail<div><a href="mailto:ericmarquez@modotouch.com" class="btn-floating red"><i class="material-icons">email</i></a></li>
+    <li><div class="center-align">Contacto<div><a data-target="modal1" class="modal-trigger btn-floating black"><i class="material-icons">person</i></a></li>
+    </ul>
 </div>
 
 
-        <section class="hero is-dark is-fullheight">
-            <!-- Hero head: will stick at the top -->
-            <div class="hero-head">
-              <header class="navbar is-white">
-                <div class="container">
-                  <div class="navbar-brand">
-                    <a class="navbar-item">
-                      <img src="img/logo-modotouch.png" alt="Logo">
-                    </a>
-                    <span class="navbar-burger burger" data-target="navbarMenuHeroC">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </span>
-                  </div>
-                  <div id="navbarMenuHeroC" class="navbar-menu">
-                    <div class="navbar-end">
-                      <a class="navbar-item" href="mailto:ericmarquez@modotouch.com">
-                        Envianos un correo
-                      </a>
-                      <a target="_blank" href="https://api.whatsapp.com/send?phone=527711208704&text=Me%20gustaría%20saber%20mas" class="navbar-item">
-                        Envianos un whatsap
-                      </a>
-                      <a onclick="refs.modalEdicion.open()" class="navbar-item">
-                        Contactanos
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </header>
-            </div>
-          
-            <!-- Hero content: will be in the middle -->
-            <div class="hero-body">
-              <div class="container has-text-centered">
-                <h1 class="title ">
-                    Modotouch.com
-                  </h1>
-                  <div class="slider">
-                    <ul>
-                        <li>
-                            <h3 class="title is-5">
-                                Soluciones digitales para tu negocio.
-                            </h3>
-                        </li>
-                        <li>
-                            <h3 class="title is-5">
-                                Transforma tu negocio.
-                            </h3>
-                        </li>
-                        <li>
-                            <h3 class="title is-5">
-                                Capta a más clientes.
-                            </h3>
-                        </li>
-                        <li>
-                            <h3 class="title is-5">
-                                Mantén presencia en la red.
-                            </h3>
-                        </li>
-                    </ul>
-                    </div>
-                    <br>
-                  <h2 class="subtitle">
-                    Cambiate al modo touch.
-                  </h2>
-                  <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
-                    <div class="column">
-                      <div class="box">
-                        <article class="media">
-                          <div class="media-left">
-                            <figure class="image is-64x64">
-                              <img src="img/digitalizar-modotouch.png" alt="Image">
-                            </figure>
-                          </div>
-                          <div class="media-content">
-                            <div class="content">
-                              <p>
-                                <strong>Asesoría de Digitalización</strong>
-                                <br>
-                                <ul>
-                                    <li>Platícanos tu negocio.</li>
-                                    <li>Hasta donde te gustaría llegar.</li>
-                                    <li>Te decimos como si.</li>
-                                </ul>
-                                <br>
-                                <strong>Optimizamos tu presupuesto</strong>
-                                <p></p>
-
-                                <button onclick="refs.modalEdicion.open()" class="button is-warning"><strong>Contactanos</strong></button>
-  
-                            </div>
-                          </div>
-                        </article>
-                      </div>
-                    </div>
-                    <div class="column">
-                      <div class="box">
-                        <article class="media">
-                          <div class="media-left">
-                            <figure class="image is-64x64">
-                              <img src="img/Diseno-web-modotouch.png" alt="Image">
-                            </figure>
-                          </div>
-                          <div class="media-content">
-                            <div class="content">
-                              <p>
-                                <strong>Diseño de Paginas Web</strong>
-                                <br>
-                                <ul>
-                                    <li>Aparece en los buscadores.</li>
-                                    <li>Igual de bien en PC, Tablet o móvil.</li>
-                                    <li>Diseño agradable.</li>
-                                </ul>
-                                <br>
-                                <strong>Desde $1500 al año</strong>
-                                <p></p>
-
-                                <button onclick="refs.modalEdicion.open()" class="button is-warning"><strong>Contactanos</strong></button>
-  
-                            </div>
-                          </div>
-                        </article>
-                      </div>
-                    </div>
-                    <div class="column">
-                        <div class="box">
-                            <article class="media">
-                              <div class="media-left">
-                                <figure class="image is-64x64">
-                                  <img src="img/publicidad-en-redes-modotouch.png" alt="Image">
-                                </figure>
-                              </div>
-                              <div class="media-content">
-                                <div class="content">
-                                  <p>
-                                    <strong>Publicidad digital</strong>
-                                    <br>
-                                    <ul>
-                                        <li>Que tu publicidad llegue al público que quieres.</li>
-                                        <li>Aparece en Facebook, Instagram, Google, u otra red social.</li>
-                                        
-                                    </ul>
-                                    <br>
-                                    <strong>Cotizamos tu campaña</strong>
-                                    <p></p>
-                                    <button onclick="refs.modalEdicion.open()" class="button is-warning"><strong>Contactanos</strong></button>
-      
-                                </div>
-                              </div>
-                            </article>
-                          </div>
-                    </div>
-                  </div>
-
-
-
-
-</body>
+       
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Cuéntanos todo!!!</h4>
+      <form action="envia.php" method="post" class="form-consulta"> 
+        <div class="row">
+          <div class="col m6 6"><p>
+            <i class="material-icons prefix">email</i>
+            <input id="icon_prefix" type="text" class="validate" name="email">
+            <label for="icon_prefix">Ingresa tu correo</label>
+          </p></div>
+          <div class="col m6 6"><p>
+            <i class="material-icons prefix">assignment</i>
+            <input id="icon_telephone" type="tel" class="validate" name="comentario">
+            <label for="icon_telephone">Platícanos de tu negocio</label>
+          </p></div>
+        </div> 
+        <button class="btn waves-effect waves-light pulse" type="submit" name="action">Enviar
+          <i class="material-icons right">send</i>
+      </button> 
+      </form>
+  </div>
+  <div class="modal-footer">
+    <a onclick="M.toast({html: 'Tomate tu tiempo, esperemos pronto te animes a dar ese gran paso.'})"class="modal-close waves-effect waves-green btn-flat">En otro momento</a>
+  </div>
+</div>
+ 
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
 </html>
