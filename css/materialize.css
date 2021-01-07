@@ -2161,8 +2161,16 @@ html {
 /**
  * Remove the margin in all browsers (opinionated).
  */
+
+
+ /**
+ * cambio de eric.
+ */
 body {
   margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 /**
@@ -2192,16 +2200,21 @@ h1 {
  * Add the correct display in IE 9-.
  * 1. Add the correct display in IE.
  */
+  /**
+ * cambio de eric.
+ */
 figcaption,
 figure,
 main {
   /* 1 */
   display: block;
+  flex: 1 0 auto;
 }
 
 /**
  * Add the correct margin in IE 8.
  */
+
 figure {
   margin: 1em 40px;
 }
