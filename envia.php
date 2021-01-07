@@ -5,7 +5,7 @@ $asunto = 'Contacto'; // acá se puede modificar el asunto del mail
 if (!$_POST){
 }else{
 	 
-    $cuerpo = "Mensaje: " . $_POST["comentario"] . "\r\n"; 
+    $cuerpo = "Mensaje: " . $_POST['comentario'] . "\r\n"; 
 
     $headers  = "MIME-Version: 1.0\n";
     $headers .= "Content-type: text/plain; charset=utf-8\n";
