@@ -2206,8 +2206,6 @@ h1 {
 figcaption,
 figure,
 main {
-  /* 1 */
-  display: block;
   flex: 1 0 auto;
 }
 
