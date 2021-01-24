@@ -43,15 +43,14 @@
         </div>
     <main>
 <?php
-$dir = '../blog/'; //path o ruta de nuestro directorio 
-chdir($dir);
-array_multisort(array_map('filemtime', ($files = glob("*.*"))), SORT_DESC, $files);
+$dir = 'https://modotouch.com/blog/'; //path o ruta de nuestro directorio 
+array_multisort(array_map('filemtime', ($dir.$files = glob("*.*"))), SORT_DESC, $dir.$files);
 
 echo '<ul class="collection container">';
-    foreach($files as $filename)
+    foreach($dir.$files as $dir.$filename)
     {
         echo '<li class="collection-item">';
-            echo '<a href="blog/'.$filename.'"><span class="badge">'.date ("F d Y H:i:s.",filemtime($filename)).'</span>'.substr($filename,0,(strlen($filename)-5)).'</a>';
+            echo '<a href="https://modotouch.com/blog/'.$dir.$filename.'"><span class="badge">'.date ("F d Y H:i:s.",filemtime($dir.$filename)).'</span>'.substr($filename,0,(strlen($filename)-5)).'</a>';
         echo '</li>';
     }
 echo '</ul>';
