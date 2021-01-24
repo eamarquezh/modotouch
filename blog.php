@@ -43,7 +43,7 @@
         </div>
     <main>
 <?php
-$dir = "blog/"; //path o ruta de nuestro directorio 
+$dir = "/blog/"; //path o ruta de nuestro directorio 
 chdir($dir);
 array_multisort(array_map('filemtime', ($files = glob("*.*"))), SORT_DESC, $files);
 
@@ -51,7 +51,7 @@ echo '<ul class="collection container">';
     foreach($files as $filename)
     {
         echo '<li class="collection-item">';
-            echo '<a href="/blog/'.$filename.'"><span class="badge">'.date ("F d Y H:i:s.",filemtime($filename)).'</span>'.substr($filename,0,(strlen($filename)-5)).'</a>';
+            echo '<a href="blog/'.$filename.'"><span class="badge">'.date ("F d Y H:i:s.",filemtime($filename)).'</span>'.substr($filename,0,(strlen($filename)-5)).'</a>';
         echo '</li>';
     }
 echo '</ul>';
