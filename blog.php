@@ -51,7 +51,7 @@ echo '<ul class="collection container">';
     foreach($files as $filename)
     {
         echo '<li class="collection-item">';
-            echo '<a href="blog/'.$filename.'"><span class="badge">'.date ("F d Y H:i:s.",filemtime($filename)).'</span>'.substr($filename,0,(strlen($filename)-5)).'</a>';
+            echo '<a href="/blog/'.$filename.'"><span class="badge">'.date ("F d Y H:i:s.",filemtime($filename)).'</span>'.substr($filename,0,(strlen($filename)-5)).'</a>';
         echo '</li>';
     }
 echo '</ul>';
