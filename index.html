@@ -173,12 +173,12 @@
 <?php
     function contador()
     {
-        $archivo = "contador.txt"; //el archivo que contiene en numero
-        $f = fopen($archivo, "r"); //abrimos el archivo en modo de lectura
+        $archivo = "contador.txt";
+        $f = fopen($archivo, "r"); 
         if($f)
         {
-            $contador = fread($f, filesize($archivo)); //leemos el archivo
-            $contador = $contador + 1; //sumamos +1 al contador
+            $contador = fread($f, filesize($archivo)); 
+            $contador = $contador + 1;
             fclose($f);
         }
         $f = fopen($archivo, "w+");
@@ -189,6 +189,7 @@
         }
         return $contador;
     }
+    contador();
 ?>
 </body>
 </html>
