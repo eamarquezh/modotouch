@@ -12,7 +12,7 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
     <link rel="icon" type="image/png" href="img/favicon.png" />
 </head>
-<body onload="contador();">
+<body>
     <header>
         <nav class="nav-wrapper blue-grey darken-4">
             <a href="#" class="brand-logo"><img src="img/logo-modotouch.png" alt="modotouch" width="50"></a>
@@ -170,25 +170,5 @@
         var instances = M.Slider.init(elems, options);
     });
 </script>
-<?php
-    function contador()
-    {
-        $archivo = "contador.txt";
-        $f = fopen($archivo, "r"); 
-        if($f)
-        {
-            $contador = fread($f, filesize($archivo)); 
-            $contador = $contador + 1;
-            fclose($f);
-        }
-        $f = fopen($archivo, "w+");
-        if($f)
-        {
-            fwrite($f, $contador);
-            fclose($f);
-        }
-        return $contador;
-    }
-?>
 </body>
 </html>
